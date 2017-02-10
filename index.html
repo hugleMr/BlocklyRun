@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Cocos2d-html5 Hello World test</title>
+    <link rel="icon" type="image/GIF" href="res/favicon.ico"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="full-screen" content="yes"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+
+    <script src="frameworks/google-blockly-3e12c1e/blockly_compressed.js"></script>
+    <script src="frameworks/google-blockly-3e12c1e/blocks_compressed.js"></script>
+    <script src="frameworks/google-blockly-3e12c1e/msg/js/en.js"></script>
+    <script src="frameworks/google-blockly-3e12c1e/javascript_compressed.js"></script>
+
+    <script src="frameworks/google-blockly-3e12c1e/blocks/cocosAudio.js"></script>
+    <script src="frameworks/google-blockly-3e12c1e/blocks/stepForward.js"></script>
+    <script src="frameworks/google-blockly-3e12c1e/blocks/stepBehind.js"></script>
+    <script src="frameworks/google-blockly-3e12c1e/blocks/turnLeft.js"></script>
+    <script src="frameworks/google-blockly-3e12c1e/blocks/turnRight.js"></script>
+    <script src="frameworks/google-blockly-3e12c1e/blocks/cocosTemplate.js"></script>
+    <script src="frameworks/google-blockly-3e12c1e/blocks/cocos.js"></script>
+
+    <script src="frameworks/google-blockly-3e12c1e/generators/javascript/cocosAudio.js"></script>
+    <script src="frameworks/google-blockly-3e12c1e/generators/javascript/stepForward.js"></script>
+    <script src="frameworks/google-blockly-3e12c1e/generators/javascript/stepBehind.js"></script>
+    <script src="frameworks/google-blockly-3e12c1e/generators/javascript/turnLeft.js"></script>
+    <script src="frameworks/google-blockly-3e12c1e/generators/javascript/turnRight.js"></script>
+    <script src="frameworks/google-blockly-3e12c1e/generators/javascript/cocosTemplate.js"></script>
+    <script src="frameworks/google-blockly-3e12c1e/generators/javascript/cocos.js"></script>
+
+    <script src="frameworks/jquery-2.1.3.js"></script>
+    <script src="frameworks/msgpack.js"></script>
+
+    <script src="frameworks/cocos2d-html5/CCBoot.js"></script>
+    <script src="main.js"></script>
+
+    <script src="blockly.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+<body>
+
+<div id="container">
+    <div id="leftContainer">
+        <button onclick="runCode()">Run</button>
+        <div id="blocklyDiv" style="width: 100%;">
+            <div id="toolboxDiv"></div>
+            <div id="startBlocksDiv"></div>
+        </div>
+    </div>
+    <div id="rightContainer">
+
+        <canvas id="gameCanvas" width="100%" height="600"></canvas>
+        <!--<script src="res/loading.js"></script>-->
+        <script>
+            (function () {
+                var nav = window.navigator;
+                var ua = nav.userAgent.toLowerCase();
+                var uaResult = /android (\d+(?:\.\d+)+)/i.exec(ua) || /android (\d+(?:\.\d+)+)/i.exec(nav.platform);
+                if (uaResult) {
+                    var browserCheck = ua.match(/(qzone|micromessenger|qq)(mobile)?(browser)?\/?([\d.]+)/i);
+                    if (browserCheck) {
+                        var browserVersion = parseFloat(browserCheck[4] || 0);
+                        if (browserVersion < 6.2) {
+                            var gameCanvas = document.getElementById("gameCanvas");
+                            var ctx = gameCanvas.getContext('2d');
+                            ctx.fillStyle = '#000000';
+                            ctx.fillRect(0, 0, 1, 1);
+                        }
+                    }
+                }
+            })();
+        </script>
+        <script src="frameworks/cocos2d-html5/CCBoot.js"></script>
+        <script cocos src="main.js"></script>
+    </div>
+</div>
+</body>
+</html>
