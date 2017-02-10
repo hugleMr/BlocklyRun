@@ -1,0 +1,16 @@
+<xml id="startBlocks" style="display: none">
+    <block type="step_behind" x="20" y="50">
+        <next>
+            <block type="step_forward">
+                <next>
+                    <block type="turn_left">
+                        <next>
+                            <block type="turn_right">
+                            </block>
+                        </next>
+                    </block>
+                </next>
+            </block>
+        </next>
+    </block>
+  </xml>

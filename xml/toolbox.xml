@@ -1,0 +1,17 @@
+<xml id="toolbox" style="display: none">
+    <category name="Cocos">
+        <block type="step_behind"></block>
+        <block type="step_forward"></block>
+        <block type="turn_left"></block>
+        <block type="turn_right"></block>
+    </category>
+    <category name ="Other">
+        <block type="controls_if"></block>
+        <block type="controls_repeat_ext"></block>
+        <block type="logic_compare"></block>
+        <block type="math_number"></block>
+        <block type="math_arithmetic"></block>
+        <block type="text"></block>
+        <block type="text_print"></block>
+    </category>
+</xml>
